@@ -19,11 +19,20 @@ int **readGraph(int size){ // Função que lê o grafo do arquivo <graph.in>:
 }
 
 void printGraph(int size){ // Função que printa o Grafo:
-    printf("Impressão do Grafo de Entrada:\n");
-    printf(" # |");
+    printf("\n  Impressão da Matriz de Adjacência do Grafo de Entrada:\n");
+    printf("  #|");
     for(int col = 1; col <= vertexNum; col++){
         printf("%3c|", col+64);
     }
+    printf("\n");
+    for(int line = 0; line < vertexNum; line++){
+		printf("%3c|", line+65);
+		for(int col = 0; col < vertexNum; col++){
+			printf("%3d|", graph[line][col]);
+		}
+		printf("\n");
+	}
+	printf("\n");
 }
 
 // MAIN FUNCTION:
